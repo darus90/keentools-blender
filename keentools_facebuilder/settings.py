@@ -797,6 +797,9 @@ class FBSceneSettings(PropertyGroup):
         description="Experimental. Automatically equalize "
                     "colors across images",
         name="Equalize color", default=False)
+    tex_fill_gaps: BoolProperty(
+        description="Experimental. Automatically fill gaps in face",
+        name="Fill gaps", default=False)
 
     tex_auto_preview: BoolProperty(
         description="Automatically apply the created texture",

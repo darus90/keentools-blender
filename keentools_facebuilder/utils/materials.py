@@ -212,11 +212,11 @@ def bake_tex(headnum, tex_name):
             return False
 
     progress_callBack = ProgressCallBack()
-    built_texture = pkt.module().texture_builder.build_texture(
+    built_texture = fb.build_texture(
         frames_count, frame_data_loader, progress_callBack,
         settings.tex_height, settings.tex_width, settings.tex_face_angles_affection,
         settings.tex_uv_expand_percents, settings.tex_back_face_culling,
-        settings.tex_equalize_brightness, settings.tex_equalize_colour)
+        settings.tex_equalize_brightness, settings.tex_equalize_colour, settings.tex_fill_gaps)
     bpy.context.window_manager.progress_end()
 
     _create_bpy_texture_from_img(built_texture, tex_name)
